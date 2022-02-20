@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="style/style.css" />
+		<script src="https://kit.fontawesome.com/912f1a9d04.js" crossorigin="anonymous"></script>
+		<script src="script/script.js" defer></script>
+		<title>Dashboard</title>
+</head>
+<body>
+		<header>
+				<button class="navBtn">
+							<i data-nav-btn="left" class="fas fa-bars"></i>
+				</button>
+				<button class="profile">
+							<i data-nav-btn="right" class="fas fa-user"></i>
+				</button>
+		</header>
+		<main>
+				<!-- sidebar -->
+				<nav class="sidebar" data-nav="left">
+						<div class="nav-links-container">
+						<!-- CLOSE BUTTON -->
+						<div class="close-btn" data-navclose-btn="left">×</div>
+						<div class="img-div">
+								<!---unsplash -->
+								<img src="images/scott-webb-bmmcfZqSjBU-unsplash.jpg" alt="logo" />
+						</div>
+						<hr>
+						<ul class="nav-items">
+								<li class="open">
+										<i class="fas fa-home"></i>
+										<a href="#">Dashboard</a>
+								</li>
+								<li>
+										<i class="fas fa-boxes"></i>
+										<a href="#">All Inventory</a>
+								</li>
+								<li>
+										<i class="fas fa-shopping-cart"></i>
+										<a href="#">Pending Cart</a>
+								</li>
+								<li>
+										<i class="fas fa-cart-arrow-down"></i>
+										<a href="#">Inventory - Order</a>
+								</li>
+								<li>
+										<i class="fas fa-user-plus"></i>	
+										<a href="#">Add New Buyer</a>
+								</li>
+								<li>
+										<i class="fas fa-user-plus"></i>	
+										<a href="#">Buyer Cart</a>
+								</li>
+								<li data-add-associate>
+											<i class="fas fa-user-plus"></i>	
+											<a href="#">Add Associate</a>
+								</li>
+						</ul>
+						</div> <!-- nav items and image wrapper -->
+						<div class="bottom-sec-nav">
+								<ul>
+										<li>
+												<i class="fas fa-user"></i>
+												<a href="#">My Profile</a>
+										</li>
+										<li>
+												<i class="fas fa-sign-out-alt"></i>
+												<a href="#">Logout</a>
+										</li>
+								</ul>
+						</div>
+				</nav><!-- sidebar -->
+								
+				<!-- Main section -->
+				<section>
+						
+				</section>
+				
+				<!-- right Side Bar -->
+				<div data-nav="right" class="right-navBar">
+						<div class="profile-container">
+								<div class="profile-img">
+										<img src="./images/Me.jpg" alt="Profile"/>
+								</div>
+								<div class="profile-info">
+										<div>
+												<p>Suhail Qureshi</p>
+												<p class="grey">9643938991</p>
+										</div>
+										<div>
+												<p data-date></p>
+												<p data-day class="grey"></p>
+										</div>
+								</div><!-- profile info -->
+						</div><!-- profile container -->
+						<div data-navclose-btn="right" class="RVCloseBtn">×</div>
+						 <!-- Search bar -->
+						<div class="search">
+								<p>All Buyers</p>
+								<input type="search" placeholder="Search Here...">
+						</div>
+						
+						<div class="buyers-list">
+								<div class="buyer-info">
+										<div>
+												<p>Ritz Milton</p>
+												<p class="grey">Maharastra</p>
+										</div>
+										<p class="grey">9999999999</p>
+								</div>
+								<div class="buyer-info">
+										<div>
+												<p>Ritz Milton</p>
+												<p class="grey">Maharastra</p>
+										</div>
+										<p class="grey">9999999999</p>
+								</div>
+								<div class="buyer-info">
+										<div>
+												<p>Ritz Milton</p>
+												<p class="grey">Maharastra</p>
+										</div>
+										<p class="grey">9999999999</p>
+								</div>
+								<div class="buyer-info">
+										<div>
+												<p>Ritz Milton</p>
+												<p class="grey">Maharastra</p>
+										</div>
+										<p class="grey">9999999999</p>
+								</div>
+								<div class="buyer-info">
+										<div>
+												<p>Ritz Milton</p>
+												<p class="grey">Maharastra</p>
+										</div>
+										<p class="grey">9999999999</p>
+								</div>
+								<div class="buyer-info">
+										<div>
+												<p>Ritz Milton</p>
+												<p class="grey">Maharastra</p>
+										</div>
+										<p class="grey">9999999999</p>
+								</div>
+								<div class="buyer-info">
+										<div>
+												<p>Ritz Milton</p>
+												<p class="grey">Maharastra</p>
+										</div>
+										<p class="grey">9999999999</p>
+								</div>
+						</div><!-- buyers list -->
+				</div><!-- right side bar -->
+		</main>
+</body>
+</html>

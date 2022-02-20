@@ -1,0 +1,292 @@
+:root {
+		--transition: 300ms ease-in;
+		--nav-transition: 400ms ease-in-out;
+		--light-grey: #ececec;
+}
+
+*,
+*::before,
+*::after {
+		box-sizing: border-box;
+}
+
+body {
+		margin: 0;
+		width: 100vw;
+		height: 100vh;		
+		background: whitesmoke;
+}
+
+a {
+		text-decoration: none;
+}
+
+header {
+		position: relative;
+		box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.7);
+		display: flex;
+		justify-content: space-between;
+}
+
+header > button {
+		border: none;
+		background: none;
+		font-size: clamp(2em, 3vw, 2.5em);
+}
+
+	main {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0 5px;
+		border: 2px solid red;
+		height: 100%;		
+/* will set 	position: relative; on pc size */
+}
+
+main nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 50%;
+		background: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 1rem;
+		box-shadow: 0px 1px 8px rgba(0,0,0,0.5);
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		pointer-events: none;
+		transform: translateX(-6rem);
+		transition: opacity var(	--nav-transition), transform var(	--nav-transition);
+		z-index: 1;
+}
+
+main nav.open {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+		pointer-events: auto;
+		overflow: auto;
+}
+
+hr {
+		background: lightgray;
+		width: 90%;
+		height: 0.1rem;
+		border: none;
+		border-radius: 0.1rem;
+		margin-bottom: 1rem;
+}
+
+.img-div {
+		padding: 1.5rem;
+}
+
+.img-div > img {
+		width: 100%;
+		height: 100%;
+		border-radius: 1rem;
+}
+
+/*nav styles*/
+ nav ul li > a {
+		font-size: clamp(1em, 3vw, 1.5em);
+		font-weight: bold;
+		color: black;
+		width: 100%;
+		height: 100%;
+}
+
+nav ul li {
+		padding: 0.4rem 0;
+		transition: transform var(--transition);
+		cursor: pointer;
+}
+
+nav ul > li > i {
+		margin-inline: 1rem;
+		transition: color var(--transition);
+}
+
+nav ul li:hover,
+nav ul li:focus {
+		transform: scale(1.1);
+		background: var(--light-grey);
+}
+
+/*Change the icon color to black if it contains open class*/
+nav ul li.open:hover i,
+nav ul li.open:focus i {
+		color: black;
+}
+
+ul > li.open {
+		background: black;		
+}
+
+li.open i,
+li.open a {
+		color: white;
+}
+
+li.open:hover a,
+li.open:focus a {
+		text-shadow: 1px 0 1px rgba(0,0,0,0.4);
+}
+
+/*Nav items*/
+/*top section mav items*/
+.nav-links-container .img-div ~ ul,
+/*Bottom section of nav*/
+.bottom-sec-nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem 0;
+		white-space: nowrap;
+}
+
+.close-btn {
+		position: absolute;
+		top: -1%;
+		right: 2%;
+		font-size: clamp(2em, 3vw, 3em);
+		cursor: pointer;
+}
+
+.right-navBar {
+		display: flex;
+		flex-direction: column;
+		gap: 10px 0;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 70%;
+		background: whitesmoke;
+		box-shadow: 0px 1px 8px rgba(0,0,0,0.5);
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;		
+		pointer-events: none;
+		transform: translateX(6rem);
+		transition: opacity var(	--nav-transition), transform var(	--nav-transition);
+		z-index: 1;
+}
+
+.right-navBar.open {
+		opacity: 1;
+		visibility: visible;
+		overflow: auto;
+		pointer-events: auto;
+		transform: translateX(0);
+}
+
+.right-navBar .profile-container {
+		display: flex;
+		gap: 0 10px;
+		background: #fff;
+		padding: 0.8rem;
+		position: relative;
+		cursor: pointer;
+}
+
+ /*Right nav close btn*/
+.RVCloseBtn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		font-size: clamp(1.2em, 3vw, 1.4em);
+		cursor: pointer;
+}
+
+.profile-img {
+		min-width: 3.3rem;
+		max-width: 4rem;
+		min-height: 2.5rem;
+		max-height: 3.5rem;
+}
+
+.right-navBar .profile-container > .profile-img > img {
+		width: 100%;
+		height: 100%;
+}
+
+.profile-info {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+}
+
+.profile-info > div > p:not(.grey) {
+		font-size: clamp(1em, 3vw, 1.4em);
+		margin: 0;
+}
+
+/*to grey text color*/
+.grey {
+		font-size: clamp(0.9em, 3vw, 1.1em);
+		color: grey;
+}
+
+.search,
+.buyer-info {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		background: #fff;
+		padding: 0.4rem 0.8rem;
+		cursor: pointer;
+}
+
+.search p {
+		margin: 0;
+}
+
+.search > input {
+		padding: 0.1rem;
+		font-size: clamp(0.5em, 3vw, 1em);
+		width: 30%;
+		transition: width var(--nav-transition);
+		cursor: pointer;
+}
+
+.search > input:hover {
+		width: 55%;
+}
+
+.buyers-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0 10px;
+}
+
+.buyers-info {
+		padding: 0.5rem 0;
+}
+
+.buyer-info p:not(.grey) {
+		font-size: clamp(1em, 3vw, 1.5em);
+}
+
+.buyer-info p {
+		margin: 0;
+}
+
+@media screen and (min-width: 2560px){
+		main {
+		display: grid;
+		grid-template-columns: 1fr 4fr 1fr;
+		gap: 0 5px;
+		border: 2px solid red;
+		height: 100%;
+}
+}
