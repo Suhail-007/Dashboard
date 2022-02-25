@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 :root {
 		--transition: 300ms ease-in;
 		--nav-transition: 400ms ease-in-out;
+		--transition-timing: 400ms;
 		--light-grey: #ececec;
 }
 
@@ -31,7 +34,7 @@ header {
 header > button {
 		border: none;
 		background: none;
-		font-size: clamp(2em, 3vw, 2.5em);
+		font-size: clamp(1.7em, 3vw, 2.5em);
 }
 
 	main {
@@ -39,8 +42,7 @@ header > button {
 		grid-template-columns: 1fr;
 		gap: 0 5px;
 		border: 2px solid red;
-		height: 100%;		
-/* will set 	position: relative; on pc size */
+		height: 100%;
 }
 
 main nav {
@@ -60,16 +62,21 @@ main nav {
 		overflow: hidden;
 		pointer-events: none;
 		transform: translateX(-6rem);
-		transition: opacity var(	--nav-transition), transform var(	--nav-transition);
 		z-index: 1;
 }
 
 main nav.open {
-		opacity: 1;
 		visibility: visible;
-		transform: translateX(0);
+		overflow: auto;		
 		pointer-events: auto;
-		overflow: auto;
+		animation: slideInLeft var(--transition-timing) forwards;
+}
+
+@keyframes slideInLeft {
+		100% {
+				transform: translateX(0);
+				opacity: 1;
+		}
 }
 
 hr {
@@ -81,17 +88,23 @@ hr {
 		margin-bottom: 1rem;
 }
 
-.img-div {
+.logo-div {
 		padding: 1.5rem;
 }
 
-.img-div > img {
+.logo-div > img {
 		width: 100%;
 		height: 100%;
 		border-radius: 1rem;
 }
 
 /*nav styles*/
+nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+}
+
  nav ul li > a {
 		font-size: clamp(1em, 3vw, 1.5em);
 		font-weight: bold;
@@ -101,7 +114,7 @@ hr {
 }
 
 nav ul li {
-		padding: 0.4rem 0;
+		padding: 0.5rem 0;
 		transition: transform var(--transition);
 		cursor: pointer;
 }
@@ -160,6 +173,7 @@ li.open:focus a {
 		cursor: pointer;
 }
 
+/*Right nav bar*/
 .right-navBar {
 		display: flex;
 		flex-direction: column;
@@ -176,7 +190,7 @@ li.open:focus a {
 		overflow: hidden;		
 		pointer-events: none;
 		transform: translateX(6rem);
-		transition: opacity var(	--nav-transition), transform var(	--nav-transition);
+		transition: all var(	--nav-transition);
 		z-index: 1;
 }
 
@@ -192,7 +206,7 @@ li.open:focus a {
 		display: flex;
 		gap: 0 10px;
 		background: #fff;
-		padding: 0.8rem;
+		padding: 0.8rem 1rem;
 		position: relative;
 		cursor: pointer;
 }
@@ -200,10 +214,10 @@ li.open:focus a {
  /*Right nav close btn*/
 .RVCloseBtn {
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: -0.5%;
+		left: 1%;
 		z-index: 2;
-		font-size: clamp(1.2em, 3vw, 1.4em);
+		font-size: clamp(1.4em, 3vw, 1.8em);
 		cursor: pointer;
 }
 
@@ -279,6 +293,108 @@ li.open:focus a {
 
 .buyer-info p {
 		margin: 0;
+}
+
+section {
+		padding: 0.5rem 0;
+}
+
+section > article {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5rem;
+}
+
+section > article > .dashboard p {
+		margin: 0;
+		font-family: 'Montserrat', sans-serif;
+}
+
+section > article > .dashboard p:first-child {
+		font-size: clamp(1.1em, 3vw, 1.7em);
+		margin-bottom: 0.3rem;
+		font-weight: bold;
+}
+
+section > article > .dashboard p:nth-child(2) {
+		font-size: clamp(1em, 3vw, 1.4em);
+}
+
+section > article > i {
+		padding: 0.7em;
+		border-radius: 0.2rem;
+		background: #fff;		
+}
+
+.inventory {
+		margin-top: 45%;
+		display: flex;
+		flex-direction: column;
+		gap: 5px 0;
+		background: #fff;
+		padding: 0.5rem ;
+}
+
+.inventory-heading p, .inventory-heading a {
+		font-size: clamp(1.1em, 3vw, 1.5em);
+}
+
+.inventory-heading a {
+		color: #6ab6ff;
+		cursor: pointer;
+}
+
+.inventory-heading {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+}
+
+.add-image {
+		width: 6rem;
+		height: 10rem;
+		border: 2px dotted black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+
+.images {
+		display: flex;
+		gap: 10px 10px;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+}
+
+.images > .inventory-images {
+		width: 6rem;
+		height: 7rem;
+		border: 1px solid lightgray;
+		transition: all var(--nav-transition);
+		cursor: pointer;
+		text-align: center;		
+}
+
+.images > .inventory-images p {
+		margin: 0;
+		padding: 0;
+}
+
+.images > .inventory-images > img {
+		width: 100%;
+		height: 100%;
+}
+
+.images > .inventory-images:hover,
+.images > .inventory-images:focus {
+		border: 1px solid #8098ff;
+		box-shadow: 1px 0px 4px rgba(0,0,0,0.5);
+}
+
+.images > .inventory-images p {
+		font-size: clamp(1em, 3vw, 1.5em);
 }
 
 @media screen and (min-width: 2560px){

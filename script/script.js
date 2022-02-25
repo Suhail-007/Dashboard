@@ -7,9 +7,8 @@ navToggle.forEach(btn => {
 		btn.addEventListener('click', e => {
 		
 		 const element = e.target.dataset.navBtn === 'left' ? document.querySelector('[data-nav="left"]') : document.querySelector('[data-nav="right"]');		 
-			 element.classList.toggle('open');
+			 element.classList.toggle('open');			 
 			});
-			
 });
 
 //close nav bar
@@ -49,3 +48,12 @@ dashboardDate.textContent = `${todayDate.getDate()} ${months[todayDate.getMonth(
 
 //get today day
 dashboardDay.textContent = days[todayDate.getDay()];
+
+window.addEventListener('click', e => {
+//it'll select the opposite navBar so if the left Nav is open and user tries to open right nav it'll remove the classlist from left nav
+const element = e.target.dataset.navBtn === 'left' ? document.querySelector('[data-nav="right"]') : document.querySelector('[data-nav="left"]');
+
+				if (element.classList.contains('open')) {
+						element.classList.remove('open');
+				}
+})
