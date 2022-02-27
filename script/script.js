@@ -1,6 +1,7 @@
 //navSection
 const navToggle = document.querySelectorAll('[data-nav-btn]');
 const navCloseBtn = document.querySelectorAll('[data-navclose-btn]');
+const overlay = document.querySelector('[data-overlay]');
 
  //open nav bar
 navToggle.forEach(btn => {
@@ -49,11 +50,79 @@ dashboardDate.textContent = `${todayDate.getDate()} ${months[todayDate.getMonth(
 //get today day
 dashboardDay.textContent = days[todayDate.getDay()];
 
-window.addEventListener('click', e => {
-//it'll select the opposite navBar so if the left Nav is open and user tries to open right nav it'll remove the classlist from left nav
-const element = e.target.dataset.navBtn === 'left' ? document.querySelector('[data-nav="right"]') : document.querySelector('[data-nav="left"]');
+const selectAssociateType = document.querySelector('#associate');
+const submitBtn = document.querySelector('[data-submitBtn]');
+const nullValue = document.querySelector('[data-dash]');
 
-				if (element.classList.contains('open')) {
-						element.classList.remove('open');
+window.addEventListener('click', e => {
+const leftNav = document.querySelector('[data-nav="left"]');
+const rightNav = document.querySelector('[data-nav="right"]');
+
+//select dataset of button
+const element = e.target.dataset.navBtn;
+
+//it'll select the opposite navBar so if the left Nav is open and user tries to open right nav it'll remove the classlist from left nav
+
+//*********DIFFERENT APPROACH
+/*const element = e.target.dataset.navBtn === 'left' ? document.querySelector('[data-nav="right"]') : document.querySelector('[data-nav="left"]');
+
+		if (element.classList.contains('open')) {
+				element.classList.remove('open');
+		}*/
+				
+		if (element === 'left' && rightNav.classList.contains('open')) {			
+			rightNav.classList.remove('open');
+		}
+		
+			if (element === 'right' &&  leftNav.classList.contains('open')) {
+				leftNav.classList.remove('open');
 				}
+				
+		//to close overlay
+		if (e.target.dataset.overlay === 'overlaydiv') {
+				leftNav.classList.remove('open');
+				overlay.style.display = 'none';
+				submitBtn.disabled = true;
+				selectAssociateType.value = nullValue;
+		}
+})
+
+const addAssociate = document.querySelector('[data-add-associate]');
+
+addAssociate.addEventListener('click', () => {
+		overlay.style.display = 'block';
+})
+
+selectAssociateType.addEventListener('change', () => {		
+
+		if (nullValue === '') {
+				submitBtn.disabled = true;
+		} else {
+				submitBtn.disabled = false;
+		}
+})
+
+const overlayCloseBtn = document.querySelector('[data-overlay-closeBtn]');
+
+overlayCloseBtn.addEventListener('click', () => {
+		overlay.style.display = 'none';	
+		submitBtn.disabled = true;
+		selectAssociateType.value = nullValue;
+		const leftNav = document.querySelector('[data-nav="left"]');
+		leftNav.classList.remove('open');
+})
+
+const seeAll = document.querySelector('[data-seeAll]');
+
+seeAll.addEventListener('click', function() {
+		const inventory = document.querySelector('[data-inventory]');
+		const inventoryImages = document.querySelector('[data-inventory-images]');
+		
+		inventory.style.height = `${inventoryImages.getBoundingClientRect().height +  inventoryImages.getBoundingClientRect().height }px`;
+})
+
+seeAll.addEventListener('dblclick', function() {
+		const inventory = document.querySelector('[data-inventory]');
+		
+		inventory.style.height = '';
 })

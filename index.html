@@ -72,7 +72,51 @@
 								</ul>
 						</div>
 				</nav><!-- sidebar -->
-								
+				
+				<!-- overlay -->
+					<div class="overlay" data-overlay="overlaydiv">
+							<div class="add-associate">
+									<div class="overlay-close-btn" data-overlay-closeBtn>×</div>
+									<h1>Add Associate</h1>
+									<div class="select-cat">
+											<p>Add Associate</p>
+											<select id="associate">
+													<option data-dash disabled selected></option>
+													<option value="buyer">Buyer</option>
+													<option value="seller">Seller</option>
+											</select>
+									</div>
+									<div>
+											<div class="associate">
+													<p>John Dew</p>
+													<select>
+															<option value="none" disabled selected >None</option>
+													</select>
+											</div>
+											<div class="associate">
+													<p>John Dew</p>
+													<select>
+															<option value="none" disabled selected >None</option>
+													</select>
+											</div>
+											<div class="associate">
+													<p>John Dew</p>
+													<select>
+															<option value="none" disabled selected >None</option>
+													</select>
+											</div>
+											<div class="associate">
+													<p>John Dew</p>
+													<select>
+															<option value="none" disabled selected >None</option>
+													</select>
+											</div>
+									</div>
+									<div class="btn-div">
+											<button type="button" disabled="true" data-submitBtn>Submit</button>
+									</div>
+							</div>
+					</div>	
 				<!-- Main section -->
 				<section>
 						<article>
@@ -83,72 +127,358 @@
 								<i class="far fa-bell"></i>
 						</article>
 						<!-- Inventory -->
-						<div class="inventory">
+						<div class="inventory" data-inventory>
 								<div class="inventory-heading">
 										<p>Inventory</p>
-										<a href="#">See All</a>
-								</div>
-								<div class="images">
+										<a href="#" data-seeAll>See All</a>
+										<span class="tooltip">Double click to close list</span>
+								</div><!-- inventory heading -->
+								<div class="images" data-inventory-images>
 										<div class="add-image">+</div>
 										<div class="inventory-images">
-												<figure>
-														
-												</figure>
 												<img src="images/images(1).jpg" alt="product image 1" />
 												<p>Muslin</p>
 												<p>$28.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
 												<img src="images/images(2).jpg" alt="product image 2" />
 												<p>Cotton</p>
 												<p>$25.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
 												<img src="images/images(3).jpg" alt="product image 3" />
 												<p>Tericat</p>
 												<p>$26.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
 												<img src="images/images(4).jpg" alt="product image 4" />
 												<p>Cotton</p>
 												<p>$31.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
 												<img src="images/images(5).jpg" alt="product image 5" />
 												<p>Tericat</p>
 												<p>$21.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
-												<img src="images/images(6).jpg" alt="" />
+												<img src="images/images(6).jpg" alt="product image 6" />
 												<p>Cotton</p>
 												<p>$31.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
-												<img src="images/images(7).jpg" alt="product image 6" />
+												<img src="images/images(7).jpg" alt="product image 7" />
 												<p>Tericat</p>
 												<p>$26.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
-												<img src="images/images(8).jpg" alt="" />
+												<img src="images/images(8).jpg" alt="product image 8" />
 												<p>Cotton</p>
 												<p>$31.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
-												<img src="images/images(9).jpg" alt="product image 7" />
+												<img src="images/images(9).jpg" alt="product image 9" />
 												<p>Muslin</p>
 												<p>$28.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
-												<img src="images/images(11).jpg" alt="product image 8" />
+												<img src="images/images(11).jpg" alt="product image 10" /><!-- inventory images -->
 												<p>Tericat</p>
 												<p>$26.99</p>
-										</div>
+										</div><!-- inventory images -->
 										<div class="inventory-images">
-												<img src="images/images(12).jpg" alt="product image 9" />
+												<img src="images/images(12).jpg" alt="product image 11" />
 												<p>Cotton</p>
 												<p>$31.99</p>
+										</div><!-- inventory images -->
+								</div><!-- images -->
+					</div>	<!-- inventory -->
+					
+								<div class="container">
+										<div class="pending-chart">
+												<h2>Pending Carts</h2>
+												<div class="orderInfoContainer finalizing">
+														<div class="nameAndCountry">
+																<p>John Dew</p>
+																<p class="grey">Dubai</p>
+														</div><!-- nameAndCountry -->
+														<div class="orderInfo">
+																<p>32 <span class="grey">Pc</span></p>
+																<p>$250</p>
+																<p>Finalizing cart</p>
+														</div><!-- order Info -->
+												</div><!-- order Info container -->
+												<div class="orderInfoContainer finalizing">
+														<div class="nameAndCountry">
+																<p>John Dew</p>
+																<p class="grey">Australia</p>
+														</div><!-- nameAndCountry -->
+														<div class="orderInfo">
+																<p>32 <span class="grey">Pc</span></p>
+																<p>$250</p>
+																<p>Finalizing cart</p>
+														</div><!-- order Info -->
+												</div><!-- order Info container -->
+												<div class="orderInfoContainer pending">
+														<div class="nameAndCountry">
+																<p>John Dew</p>
+																<p class="grey">Dubai</p>
+														</div><!-- nameAndCountry -->
+														<div class="orderInfo">
+																<p>32 <span class="grey">Pc</span></p>
+																<p>$250</p>
+																<p>Payment Pending</p>
+														</div><!-- order Info -->
+												</div><!-- order Info container -->
+												<div class="orderInfoContainer billed">
+														<div class="nameAndCountry">
+																<p>John Dew</p>
+																<p class="grey">USA</p>
+														</div><!-- nameAndCountry -->
+														<div class="orderInfo">
+																<p>32 <span class="grey">Pc</span></p>
+																<p>$250</p>
+																<p>Billed</p>
+														</div><!-- order Info -->
+												</div><!-- order Info container -->
+												<div class="orderInfoContainer finalizing">
+														<div class="nameAndCountry">
+																<p>John Dew</p>
+																<p class="grey">India</p>
+														</div><!-- nameAndCountry -->
+														<div class="orderInfo">
+																<p>32 <span class="grey">Pc</span></p>
+																<p>$250</p>
+																<p>Finalizing cart</p>
+														</div><!-- order Info -->
+												</div><!-- order Info container -->
+												<div class="orderInfoContainer billed">
+														<div class="nameAndCountry">
+																<p>John Dew</p>
+																<p class="grey">Finland</p>
+														</div><!-- nameAndCountry -->
+														<div class="orderInfo">
+																<p>32 <span class="grey">Pc</span></p>
+																<p>$250</p>
+																<p>Billed</p>
+														</div><!-- order Info -->
+												</div><!-- order Info container -->
+												<div class="orderInfoContainer last pending">
+														<div class="nameAndCountry">
+																<p>John Dew</p>
+																<p class="grey">South Africa</p>
+														</div><!-- nameAndCountry -->
+														<div class="orderInfo">
+																<p>32 <span class="grey">Pc</span></p>
+																<p>$250</p>
+																<p> Payment Pending</p>
+														</div><!-- order Info -->
+												</div><!-- order Info container -->
+										</div><!-- pending chart -->
+										
+										<div class="inventory-wise-orders">
+												<h2>Inventory wise order</h2>
+												<div class="iwo-order">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+												
+												<div class="iwo-order">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+												
+												<div class="iwo-order">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+												
+												<div class="iwo-order">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+												
+												<div class="iwo-order">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+												
+												<div class="iwo-order">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+												
+												<div class="iwo-order">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+												
+												<div class="iwo-order">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+												
+												<div class="iwo-order">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+												
+												<div class="iwo-order last">
+														<div class="iwo-product-detail">
+																<div class="iwo-img">
+																		<img src="images/images(1).jpg" alt="product image 1" />
+																</div><!-- iwo img -->
+																<div class="iwo-order-detail">
+																		<p class="bold">Silk Ethenic dress</p>
+																		<p class="grey">X suppliers</p>
+																		<p class="grey">15 Pieces</p>
+																		<p class="grey">17/2/22</p>
+																</div><!-- iwo order detail -->
+														</div><!-- iwo product detail -->
+														<div>
+																<p>$4 <span class="grey">/Pc</span></p>
+																<p>Buyers: 5</p>
+																<p>Wishlisted: 9</p>
+														</div>
+												</div><!-- iwo order -->
+
+										</div><!-- inventory order wise -->
+										<div class="orderCharts">
+												<div class="orderChart-img">
+														<h2>Order Status</h2>
+														<img src="images/pie.jpg" />
+												</div>
+												<div class="analytics-container">
+														<h2>Analytics and Statistics</h2>
+														<img src="images/analytics.jpg" />
+												</div>
 										</div>
-								</div>
+								</div><!-- container -->
 				</section>
 				
 				<!-- right Side Bar -->
