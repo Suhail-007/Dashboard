@@ -111,18 +111,3 @@ overlayCloseBtn.addEventListener('click', () => {
 		const leftNav = document.querySelector('[data-nav="left"]');
 		leftNav.classList.remove('open');
 })
-
-const seeAll = document.querySelector('[data-seeAll]');
-
-seeAll.addEventListener('click', function() {
-		const inventory = document.querySelector('[data-inventory]');
-		const inventoryImages = document.querySelector('[data-inventory-images]');
-		
-		inventory.style.height = `${inventoryImages.getBoundingClientRect().height +  inventoryImages.getBoundingClientRect().height }px`;
-})
-
-seeAll.addEventListener('dblclick', function() {
-		const inventory = document.querySelector('[data-inventory]');
-		
-		inventory.style.height = '';
-})
