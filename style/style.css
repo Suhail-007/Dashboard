@@ -391,13 +391,14 @@ section > article > i {
 		gap: 5px 0;
 		background: #fff;
 		padding: 0.5rem ;
-		overflow: hidden;
 		transition: height var(--nav-transition);
 		width: 100vw;
+		overflow: hidden;
 }
 
 .inventory-heading p,
-.inventory-heading a {
+.inventory-heading a,
+.add-image {
 		font-size: clamp(1.1em, 3vw, 1.3em);
 		text-transform: capitalize;
 }
@@ -415,7 +416,6 @@ section > article > i {
 }
 
 .add-image {
-
 		border: 2px dotted black;		
 		display: flex;
 		justify-content: center;
@@ -424,7 +424,7 @@ section > article > i {
 
 .images {
 		display: grid;
-		grid-template-columns: repeat(4,1fr);
+		grid-template-columns: repeat(4, minmax(50px, 100px));
 		gap: 10px 10px;
 }
 
@@ -442,7 +442,8 @@ section > article > i {
 }
 
 .inventory-image-div > img {
-		height: 4em;		
+		height: 15vw;		
+		width: 15vw;
 }
 
 /*product info*/
@@ -573,19 +574,19 @@ section > article > i {
 }
 
 @media screen and (min-width: 768px) {
-.add-image {
-		height: 7em;
-		width: 100px;
-}
-
 .images {
 		display: flex;
-		width: 100%;
 		overflow-x: scroll;
 }
 
-.images > .inventory-images > img {
-		height: 5rem;		
+.add-image {
+		flex-shrink: 0;
+		flex-basis: 10vw;
+}
+
+.inventory-image-div > img {
+		height: 14vw;		
+		width: 15vw;
 }
 }
 
@@ -631,6 +632,12 @@ main nav,
 
 .inventory {
 		width: 100%;		
+}
+
+.inventory-image-div > img {
+		height: 10vh;		
+		width: 11vh;
+		background: red;
 }
 
 .container {
